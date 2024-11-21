@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 6</title>
+    <script>
+        function afficherJour() {
+            const jours = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+            let numero = parseInt(prompt("Entrez un numéro (1-7) :"));
+
+            if (numero >= 1 && numero <= 7) {
+                alert(Le jour correspondant est : ${jours[numero - 1]});
+            } else {
+                alert("Numéro invalide. Entrez un chiffre entre 1 et 7.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="afficherJour()">Afficher le jour</button>
+</body>
+</html>

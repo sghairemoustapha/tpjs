@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 10 - Objet Date</title>
+    <script>
+        // Fonction pour afficher la date actuelle formatée
+        function afficherDate() {
+            // Crée une nouvelle instance de l'objet Date
+            var date = new Date();
+
+            // Récupère les éléments de la date
+            var jour = date.getDate();  // Jour du mois
+            var mois = date.getMonth() + 1;  // Mois (0-11 donc on ajoute 1)
+            var annee = date.getFullYear();  // Année
+
+            // Format JJ/MM/AAAA, ajoute un 0 devant les valeurs < 10 pour le jour et le mois
+            if (jour < 10) {
+                jour = '0' + jour;
+            }
+            if (mois < 10) {
+                mois = '0' + mois;
+            }
+
+            // Affiche la date dans un élément HTML avec id "date"
+            document.getElementById("date").textContent = jour + '/' + mois + '/' + annee;
+        }
+    </script>
+</head>
+<body onload="afficherDate()">
+    <h1>Exercice 10 - Objet Date</h1>
+    <p>La date actuelle est :</p>
+    <p id="date"></p> <!-- L'élément où la date sera affichée -->
+</body>
+</html>

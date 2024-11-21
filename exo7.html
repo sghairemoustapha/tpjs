@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 7 - Fonctions</title>
+    <script>
+        // Fonction pour calculer l'aire du cercle
+        function calculerAire() {
+            // Récupère la valeur du rayon saisie par l'utilisateur
+            var rayon = parseFloat(document.getElementById("rayon").value);
+
+            // Vérifie si la saisie est un nombre valide
+            if (isNaN(rayon) || rayon <= 0) {
+                alert("Veuillez entrer un rayon valide (un nombre positif).");
+                return;
+            }
+
+            // Calcul de l'aire du cercle (Aire = π * rayon^2)
+            var aire = Math.PI * Math.pow(rayon, 2);
+
+            // Affiche le résultat dans une alerte
+            alert("L'aire du cercle est : " + aire.toFixed(2) + " unités carrées.");
+        }
+    </script>
+</head>
+<body>
+    <h1>Exercice 7 - Fonctions</h1>
+    <p>Entrez le rayon d'un cercle pour calculer son aire.</p>
+
+    <!-- Champ de saisie pour le rayon -->
+    <input type="number" id="rayon" min="0" step="any" required>
+    
+    <!-- Bouton pour calculer l'aire -->
+    <button onclick="calculerAire()">Calculer l'aire</button>
+</body>
+</html>
